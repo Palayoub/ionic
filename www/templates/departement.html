@@ -1,0 +1,29 @@
+<ion-view view-title="Département">
+<ion-content class="padding"  ng-controller="MyCtrl">
+<div ng-repeat="item in items" class="list card">
+
+  <div class="item {{item.style}}-bg">
+    <h2 class="stable">{{item.title}}</h2>
+  </div>
+  <div class="item item-body">
+  <img class="full-image" src="img/{{item.image}}.jpg">
+   <div ng-class="isItemShown(item) ? 'item-expand active' : 'item-expand inactive'">
+    <p>{{item.text}}
+    </p>
+    <p>
+    Chef de département : <i class="{{item.style}}">{{item.chef}}</i><br>
+    Email : <i class="{{item.style}}">{{item.email}}</i><br>
+    Les filières : <i class="{{item.style}}">{{item.option}}</i>
+    </p>
+    </div>
+	  <div ng-click="toggleItem(item)" class="item-expand-footer">
+	<i ng-class="isItemShown(item) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+	{{ isItemShown(item) ? 'Less' : 'More' }}
+          </div>
+    </div>
+  </div>
+
+</div>
+<div><br></div><div><br></div><div><br></div><div><br><br></div>
+</ion-content>
+</ion-view>

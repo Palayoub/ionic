@@ -1,0 +1,86 @@
+<ion-view view-title="Ecole Supérieure de Technologie d'Oujda" >
+<!--
+<div class="bar bar-subheader">
+  <h2 class="title">Ecole Supérieure de Technologie d'Oujda</h2>
+  </div>
+ -->
+
+<ion-nav-title><img src="img/logoest.png"></ion-nav-title>
+
+   <ion-content class="padding" ng-controller="EventsCtrl">
+	<center><img src="img/logoesto.png"></center>
+			 <ion-slide-box does-continue=true auto-play=true slide-interval="4000">
+	  	   <ion-slide>
+	    		<a href="#"><img class="full-image" src="img/bar1.jpg"></a>
+	  	  </ion-slide>
+	      <ion-slide>
+	    		<a href="#"><img class="full-image" src="img/bar2.jpg"></a>
+	  	  </ion-slide>
+		  <ion-slide>
+	    		<a href="#"><img class="full-image" src="img/bar3.jpg"></a>
+	  	  </ion-slide>
+		 </ion-slide-box>
+	<ion-list >
+	  <div class="item item-divider">
+	    ACTUALITÉS
+	  </div>
+	    <a ng-repeat="event in events | limitTo: +6" class="item item-thumbnail-left" ng-href="{{event.lien}}">
+	      <img src="img/{{event.statut}}.png">
+	      <h2>{{event.nomArticle}}</h2>
+	      <p>{{event.commentaire}}</p>
+	      <p><i class="energized">{{event.date}}</i></p>
+	    </a>
+	  <div class="item item-divider">
+	   ESPACE ETUDIANT
+	  </div>
+		  <a class="item" ui-sref="devoirs">
+		    <center><i class="energized">C</i>alendrier des Devoirs Surveillés</center>
+		  </a>
+		  <a class="item" href="https://drive.google.com/drive/folders/0BxkS6HFe0swycTNDZlQ3aFROUjg">
+		    <center><i class="energized">E</i>mplois du temps</center>
+		  </a>
+		  <a class="item" href="http://esto.ump.ma/images/Calendrier_Acadmique-1516vf.xls">
+		    <center><i class="energized">C</i>alendrier</center>
+		  </a>
+		  <a class="item" ui-sref="etudiants">
+		  	<center><i class="energized">B</i>ureau des Etudiants</center>
+		  </a>
+		  <a class="item" ui-sref="bourses">
+		    <center><i class="energized">B</i>ourses d'études</center>
+		  </a>
+		  <a class="item" href="http://www.medi1tv.com/ar/%D9%85%D8%A8%D8%A7%D8%B1%D8%A7%D8%A9-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-120-%D9%85%D9%86%D8%B5%D8%A8%D8%A7-%D8%A8%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B1%D9%83-%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D8%A7%D8%A6%D8%A8-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9-%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-55284">
+		    <center><i class="energized">C</i>oncours</center>
+		  </a>
+	  <div class="item item-divider">
+	   GOUVERNANCE
+	  </div>
+		  <a class="item" ui-sref="conseils">
+		    <center><i class="positive">C</i>onseil de l'école</center>
+		  </a>
+		  <a class="item" ui-sref="commission">
+		    <center><i class="positive">C</i>ommission Scientifique</center>
+		  </a>
+		  <a class="item" ui-sref="representants">
+		    <center><i class="positive">R</i>eprésentant de l'Ecole au Conseil d'université</center>
+		  </a>
+	  <div class="item item-divider">
+	    MOT DU DIRECTEUR
+	  </div>
+	  <div class="list">
+
+    <a class="item item-text-wrap" href="#">
+      <p>L’Ecole Supérieure de Technologie est au cœur d’un environnement de formation et de recherche de l’enseignement supérieur qui  permet de dispenser un enseignement de qualité et offre une formation pluridisciplinaire attrayante, diversifiée et inscrite dans les préoccupations régionales et nationales...</p>
+    </a>
+</div>
+	</ion-list>
+<!--
+	<ion-list ng-controller="EventsCtrl">
+	  <ion-item ng-repeat="event in events" class="item item-thumbnail-left">
+	    <img src="img/new.png">
+	    <a href="#">HELLO</a>
+	    <p>Card {{event.id}}</p>
+	  </ion-item>
+	</ion-list>
+-->
+
+</ion-view>
